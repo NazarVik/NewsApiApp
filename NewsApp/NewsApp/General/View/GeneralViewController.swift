@@ -74,13 +74,11 @@ extension GeneralViewController: UICollectionViewDataSource {
         
         return cell
     }
-    
-    
 }
 
 //MARK: - UICollectionViewDelegate
 extension GeneralViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //navigationController?.pushViewController(<#T##viewController: UIViewController##UIViewController#>, animated: <#T##Bool#>)
+        navigationController?.pushViewController(DescriptionViewController(), animated: true)
     }
 }
