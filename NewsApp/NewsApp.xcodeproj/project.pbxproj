@@ -16,6 +16,7 @@
 		7824035329FADD6800986C27 /* TechnologyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7824035229FADD6800986C27 /* TechnologyViewController.swift */; };
 		7824035629FFB0F200986C27 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 7824035529FFB0F200986C27 /* SnapKit */; };
 		7824035C29FFB3F700986C27 /* GeneralCollectionViewSell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7824035B29FFB3F700986C27 /* GeneralCollectionViewSell.swift */; };
+		7824035E29FFC8D700986C27 /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7824035D29FFC8D700986C27 /* DescriptionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		7824035029FADD0100986C27 /* BusinessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessViewController.swift; sourceTree = "<group>"; };
 		7824035229FADD6800986C27 /* TechnologyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechnologyViewController.swift; sourceTree = "<group>"; };
 		7824035B29FFB3F700986C27 /* GeneralCollectionViewSell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralCollectionViewSell.swift; sourceTree = "<group>"; };
+		7824035D29FFC8D700986C27 /* DescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 			children = (
 				7824033A29FAD97900986C27 /* AppDelegate.swift */,
 				7824034E29FADBC000986C27 /* TabBarController.swift */,
+				7824035D29FFC8D700986C27 /* DescriptionViewController.swift */,
 				7824035729FFB3A100986C27 /* General */,
 				7824035829FFB3B300986C27 /* Business */,
 				7824035929FFB3C400986C27 /* Technology */,
@@ -188,6 +191,7 @@
 				7824035129FADD0100986C27 /* BusinessViewController.swift in Sources */,
 				7824034F29FADBC000986C27 /* TabBarController.swift in Sources */,
 				7824033F29FAD97900986C27 /* GeneralViewController.swift in Sources */,
+				7824035E29FFC8D700986C27 /* DescriptionViewController.swift in Sources */,
 				7824033B29FAD97900986C27 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
