@@ -18,8 +18,8 @@ final class TabBarController: UITabBarController {
     
     private func setupViewController() {
         viewControllers = [
-            setupNavigationController(rootViewController: GeneralViewController(), title: "General", image: "newspaper"),
-            setupNavigationController(rootViewController: BusinessViewController(), title: "Business", image: "briefcase"),
+            setupNavigationController(rootViewController: GeneralViewController(viewModel: GeneralViewModel()), title: "General", image: "newspaper"),
+            setupNavigationController(rootViewController: BusinessViewController(viewModel: BusinessViewModel()), title: "Business", image: "briefcase"),
             setupNavigationController(rootViewController: TechnologyViewController(), title: "Technology", image: "gyroscope")
         ]
     }
@@ -33,5 +33,13 @@ final class TabBarController: UITabBarController {
         rootViewController.navigationItem.title = title
         
         return navigationController
+    }
+    
+    private func setupTabBar() {
+        let appearance = UITabBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        tabBar.scrollEdgeAppearance = appearance
+        
+        view.tintColor = .black
     }
 }
