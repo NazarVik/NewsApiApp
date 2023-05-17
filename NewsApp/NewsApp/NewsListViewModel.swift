@@ -12,7 +12,7 @@ protocol NewsListViewModelProtocol {
     var showError: ((String) -> Void)? { get set }
     var reloadCell: ((IndexPath) -> Void)? { get set }
     var sections: [TableCollectionViewSection] { get }
-    
+
     func loadData(searchText: String?)
     
 }
@@ -88,7 +88,7 @@ class NewsListViewModel: NewsListViewModelProtocol {
         
         if sections.isEmpty || isSearchTextChanged {
             let firstSection = TableCollectionViewSection(items: viewModels)
-            let secondSection = TableCollectionViewSection(items: viewModels)
+//            let secondSection = TableCollectionViewSection(items: viewModels)
             sections = [firstSection]
         } else {
             sections[0].items += viewModels

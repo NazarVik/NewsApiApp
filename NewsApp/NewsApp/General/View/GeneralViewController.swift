@@ -71,7 +71,7 @@ class GeneralViewController: UIViewController {
         }
         
         viewModel.showError = { error in
-            print(error)
+            self.showAlert()
         }
     }
     
@@ -94,6 +94,15 @@ class GeneralViewController: UIViewController {
             make.leading.trailing.equalToSuperview().inset(5)
             make.bottom.equalTo(view.safeAreaLayoutGuide)
         }
+    }
+    
+    private func showAlert() {
+        let alert = UIAlertController(title: "Error", message: "Something wrong", preferredStyle: .alert)
+        
+        let actionFinished = UIAlertAction(title: "Exit", style: .default)
+    
+        alert.addAction(actionFinished)
+        self.present(alert,animated: true)
     }
 }
 
