@@ -30,6 +30,8 @@ class GeneralViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
         
+        collectionView.keyboardDismissMode = .onDrag
+        
         return collectionView
     }()
     // MARK: - Properties
@@ -52,8 +54,6 @@ class GeneralViewController: UIViewController {
         
         setupUI()
         collectionView.register(GeneralCollectionViewSell.self, forCellWithReuseIdentifier: "GeneralCollectionViewSell")
-        
-        collectionView.keyboardDismissMode = .onDrag
         
         viewModel.loadData(searchText: nil)
     }

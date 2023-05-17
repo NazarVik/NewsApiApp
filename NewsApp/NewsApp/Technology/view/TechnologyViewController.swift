@@ -45,8 +45,6 @@ final class TechnologyViewController: UIViewController {
         setupUI()
         collectionView.register(TechnologyViewCell.self, forCellWithReuseIdentifier: "TechnologyViewCell")
         
-        collectionView.keyboardDismissMode = .onDrag
-        
         viewModel.loadData(searchText: nil)
     }
     // MARK: - Methods
@@ -62,7 +60,7 @@ final class TechnologyViewController: UIViewController {
         }
         
         viewModel.showError = { error in
-            print(error)
+            self.showAlert()
         }
     }
     private func setupUI() {
@@ -77,6 +75,15 @@ final class TechnologyViewController: UIViewController {
     collectionView.snp.makeConstraints { make in
         make.center.equalToSuperview()
         }
+    }
+    
+    private func showAlert() {
+        let alert = UIAlertController(title: "Error", message: "Something wrong", preferredStyle: .alert)
+        
+        let actionFinished = UIAlertAction(title: "Exit", style: .default)
+    
+        alert.addAction(actionFinished)
+        self.present(alert,animated: true)
     }
 }
 
@@ -94,13 +101,19 @@ extension TechnologyViewController: UICollectionViewDelegate {
 }
 
 extension TechnologyViewController: UICollectionViewDataSource {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        viewModel.sections.count
+    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        3
+        viewModel.sections[section].items.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let article = viewModel.sections[indexPath.section].items[indexPath.row] as? ArticleCellViewModel, let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GeneralCollectionViewSell", for: indexPath) as? GeneralCollectionViewSell else { return UICollectionViewCell() }
+        guard let article = viewModel.sections[indexPath.section].items[indexPath.row] as? ArticleCellViewModel, let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TechnologyViewCell", for: indexPath) as? TechnologyViewCell else {
+            return UICollectionViewCell()
+            
+        }
         
         cell.set(article: article)
         
