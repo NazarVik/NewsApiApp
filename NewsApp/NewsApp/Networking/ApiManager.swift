@@ -23,6 +23,7 @@ final class ApiManager {
                         searchText: String?,
                         completion: @escaping (Result<[ArticleResponseObject], Error>) -> ()) {
         var searchParameter = ""
+        
         if let searchText = searchText {
             searchParameter = "&q=\(searchText)"
         }
@@ -50,7 +51,6 @@ final class ApiManager {
                 completion(.failure(error))
             }
         }
-        
         session.resume()
     }
     

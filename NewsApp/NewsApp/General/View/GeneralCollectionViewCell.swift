@@ -1,5 +1,5 @@
 //
-//  GeneralCollectionViewSell.swift
+//  GeneralCollectionViewCell.swift
 //  NewsApp
 //
 //  Created by Виктор Назаров on 1.05.23.
@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import SnapKit
 
-final class GeneralCollectionViewSell: UICollectionViewCell {
+final class GeneralCollectionViewCell: UICollectionViewCell {
     // MARK: - GUI variables
     private lazy var imageView: UIImageView = {
         let view = UIImageView()

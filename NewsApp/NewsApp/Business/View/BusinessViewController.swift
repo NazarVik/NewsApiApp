@@ -44,7 +44,7 @@ final class BusinessViewController: UIViewController {
         
         setupUI()
         
-        collectionView.register(GeneralCollectionViewSell.self, forCellWithReuseIdentifier: "GeneralCollectionViewSell")
+        collectionView.register(GeneralCollectionViewCell.self, forCellWithReuseIdentifier: "GeneralCollectionViewSell")
         
         collectionView.register(DetailsCollectionViewCell.self, forCellWithReuseIdentifier: "DetailsCollectionViewCell")
         
@@ -95,14 +95,12 @@ extension BusinessViewController: UICollectionViewDataSource {
         guard let article = viewModel.sections[indexPath.section].items[indexPath.row] as? ArticleCellViewModel else { return UICollectionViewCell() }
 
         if indexPath.section == 0 {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GeneralCollectionViewSell", for: indexPath) as? GeneralCollectionViewSell
-            
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GeneralCollectionViewCell", for: indexPath) as? GeneralCollectionViewCell
             cell?.set(article: article)
             
             return cell ?? UICollectionViewCell()
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DetailsCollectionViewCell", for: indexPath) as? DetailsCollectionViewCell
-            
             cell?.set(article: article)
             
             return cell ?? UICollectionViewCell()

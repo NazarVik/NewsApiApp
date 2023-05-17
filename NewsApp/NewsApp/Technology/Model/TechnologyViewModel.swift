@@ -16,7 +16,6 @@ final class TechnologyViewModel: NewsListViewModel {
                            page: page,
                            searchText: searchText) { [weak self] result in
             self?.handleResult(result)
-            
         }
     }
 }

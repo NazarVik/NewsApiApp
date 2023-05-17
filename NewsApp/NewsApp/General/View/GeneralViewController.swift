@@ -37,7 +37,6 @@ class GeneralViewController: UIViewController {
     // MARK: - Properties
     private var viewModel: NewsListViewModelProtocol
     
-    
     // MARK: - Life cycle
     init(viewModel: NewsListViewModelProtocol) {
         self.viewModel = viewModel
@@ -53,7 +52,7 @@ class GeneralViewController: UIViewController {
         super.viewDidLoad()
         
         setupUI()
-        collectionView.register(GeneralCollectionViewSell.self, forCellWithReuseIdentifier: "GeneralCollectionViewSell")
+        collectionView.register(GeneralCollectionViewCell.self, forCellWithReuseIdentifier: "GeneralCollectionViewCell")
         
         viewModel.loadData(searchText: nil)
     }
@@ -117,7 +116,9 @@ extension GeneralViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let article = viewModel.sections[indexPath.section].items[indexPath.row] as? ArticleCellViewModel, let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GeneralCollectionViewSell", for: indexPath) as? GeneralCollectionViewSell else { return UICollectionViewCell() }
+        guard let article = viewModel.sections[indexPath.section].items[indexPath.row] as? ArticleCellViewModel,
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GeneralCollectionViewCell", for: indexPath)
+                as? GeneralCollectionViewCell else { return UICollectionViewCell() }
         
         cell.set(article: article)
         

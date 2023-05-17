@@ -15,7 +15,7 @@
 		7824035129FADD0100986C27 /* BusinessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7824035029FADD0100986C27 /* BusinessViewController.swift */; };
 		7824035329FADD6800986C27 /* TechnologyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7824035229FADD6800986C27 /* TechnologyViewController.swift */; };
 		7824035629FFB0F200986C27 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 7824035529FFB0F200986C27 /* SnapKit */; };
-		7824035C29FFB3F700986C27 /* GeneralCollectionViewSell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7824035B29FFB3F700986C27 /* GeneralCollectionViewSell.swift */; };
+		7824035C29FFB3F700986C27 /* GeneralCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7824035B29FFB3F700986C27 /* GeneralCollectionViewCell.swift */; };
 		7824035E29FFC8D700986C27 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7824035D29FFC8D700986C27 /* NewsViewController.swift */; };
 		7876E18A2A13F53400DDE1EF /* TechnologyViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7876E1892A13F53400DDE1EF /* TechnologyViewCell.swift */; };
 		7876E18C2A13F68B00DDE1EF /* TechnologyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7876E18B2A13F68B00DDE1EF /* TechnologyViewModel.swift */; };
@@ -42,7 +42,7 @@
 		7824034E29FADBC000986C27 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		7824035029FADD0100986C27 /* BusinessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessViewController.swift; sourceTree = "<group>"; };
 		7824035229FADD6800986C27 /* TechnologyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechnologyViewController.swift; sourceTree = "<group>"; };
-		7824035B29FFB3F700986C27 /* GeneralCollectionViewSell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralCollectionViewSell.swift; sourceTree = "<group>"; };
+		7824035B29FFB3F700986C27 /* GeneralCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralCollectionViewCell.swift; sourceTree = "<group>"; };
 		7824035D29FFC8D700986C27 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		7876E1892A13F53400DDE1EF /* TechnologyViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechnologyViewCell.swift; sourceTree = "<group>"; };
 		7876E18B2A13F68B00DDE1EF /* TechnologyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechnologyViewModel.swift; sourceTree = "<group>"; };
@@ -137,7 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				7824033E29FAD97900986C27 /* GeneralViewController.swift */,
-				7824035B29FFB3F700986C27 /* GeneralCollectionViewSell.swift */,
+				7824035B29FFB3F700986C27 /* GeneralCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -290,7 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7824035329FADD6800986C27 /* TechnologyViewController.swift in Sources */,
-				7824035C29FFB3F700986C27 /* GeneralCollectionViewSell.swift in Sources */,
+				7824035C29FFB3F700986C27 /* GeneralCollectionViewCell.swift in Sources */,
 				7824035129FADD0100986C27 /* BusinessViewController.swift in Sources */,
 				7824034F29FADBC000986C27 /* TabBarController.swift in Sources */,
 				7824033F29FAD97900986C27 /* GeneralViewController.swift in Sources */,
